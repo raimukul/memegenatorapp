@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Canvas from './Canvas'
 
 import checkImageHeight from "../Utils/checkImageHeight"
+import { Container } from "@material-ui/core"
 
 class MemeGenerator extends Component {
     constructor() {
@@ -147,6 +148,7 @@ class MemeGenerator extends Component {
 
     render() {
         return (
+            <Container>
             <Canvas 
                 state={ this.state } 
                 handleRandomMemeClick={ this.handleRandomMemeClick } 
@@ -164,6 +166,7 @@ class MemeGenerator extends Component {
                 setImage = {this.setImage}
                 setText={ this.setText } 
             />
+            </Container>
         )
     }
 }
